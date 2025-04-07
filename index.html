@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZeroYogurt - One Piece Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Kanit', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      background: url('https://i.postimg.cc/VNKyhYtb/monkey-d-luffy-straw-hat2-1920x1080-ezgif-com-video-to-gif-converter.gif') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-shadow: 3px 3px 10px #000;
+      animation: fadeIn 2s ease;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 1;
+    }
+
+    .hero h1, .hero p, .buttons {
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    .buttons {
+      margin: 2rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .buttons a {
+      margin: 10px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+    }
+
+    .anilist { background-color: #02a9ff; }
+    .mal { background-color: #2e51a2; }
+    .discord { background-color: #5865F2; }
+    .insta { background-color: #E1306C; }
+    .simkl { background-color: #FF9900; }
+    .letterboxd { background-color: #00d474; }
+
+    .buttons a:hover {
+      transform: scale(1.05);
+      filter: brightness(1.2);
+    }
+
+    .discord-banner {
+      margin: 30px auto;
+      max-width: 700px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .discord-banner img {
+      width: 100%;
+      border-radius: 12px;
+      border: 3px solid #5865F2;
+      transition: transform 0.3s ease;
+    }
+
+    .discord-banner img:hover {
+      transform: scale(1.02);
+    }
+
+    audio {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      z-index: 10;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      p { font-size: 1rem; }
+      .buttons a { font-size: 0.9rem; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>ZeroYogurt</h1>
+    <p>Set sail with my anime world!</p>
+    <div class="buttons">
+      <a href="https://anilist.co/user/Zeroyogurt/" class="anilist" target="_blank"><i class="fas fa-tv"></i> AniList</a>
+      <a href="https://myanimelist.net/profile/Zeroyogurt" class="mal" target="_blank"><i class="fas fa-film"></i> MyAnimeList</a>
+      <a href="https://discordid.netlify.app/?id=1083412512806019176" class="discord" target="_blank"><i class="fab fa-discord"></i> Discord</a>
+      <a href="https://instagram.com/zeroyogurtt/" class="insta" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://simkl.com/7287665/" class="simkl" target="_blank"><i class="fas fa-stream"></i> Simkl</a>
+      <a href="https://letterboxd.com/Zeroyogurt/" class="letterboxd" target="_blank"><i class="fas fa-video"></i> Letterboxd</a>
+    </div>
+    <div class="discord-banner">
+      <a href="https://discordid.netlify.app/?id=1083412512806019176" target="_blank">
+        <img src="https://discord.c99.nl/widget/theme-2/1083412512806019176.png" alt="Join my Discord!">
+      </a>
+    </div>
+  </div>
+
+  <audio controls autoplay loop>
+    <source src="https://www.televisiontunes.com/uploads/audio/One%20Piece%20-%20We%20Are.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+</body>
+</html>
