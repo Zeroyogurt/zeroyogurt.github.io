@@ -100,13 +100,14 @@
       margin: 30px auto;
       max-width: 700px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
     }
 
     .discord-banner img {
       width: 100%;
+      max-width: 350px;
       border-radius: 12px;
       border: 3px solid #5865F2;
       transition: transform 0.3s ease;
@@ -118,6 +119,11 @@
 
     .spotify-widget {
       margin-top: 10px;
+    }
+
+    .spotify-widget img {
+      max-width: 100%;
+      height: auto;
     }
 
     audio {
@@ -139,9 +145,23 @@
         font-size: 0.95rem;
         padding: 1rem;
       }
+      .buttons {
+        flex-direction: column;
+        align-items: center;
+      }
       .buttons a {
         font-size: 0.9rem;
-        padding: 10px 20px;
+        padding: 12px 20px;
+        width: 80%;
+        justify-content: center;
+      }
+      .discord-banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .discord-banner img {
+        max-width: 90%;
       }
     }
   </style>
@@ -173,31 +193,17 @@
       <a href="https://www.pixiv.net/en/users/114089624" class="pixiv" target="_blank"><i class="fas fa-palette"></i> Pixiv</a>
     </div>
 
-   <style>
-  .discord-banner {
-    display: flex;
-    gap: 20px; /* optional spacing between them */
-    align-items: center; /* vertical alignment */
-  }
-
-  .discord-banner a img,
-  .spotify-widget a img {
-    max-width: 100%;
-    height: auto;
-  }
-</style>
-
-<div class="discord-banner">
-  <a href="https://discordid.netlify.app/?id=1083412512806019176" target="_blank">
-    <img src="https://discord.c99.nl/widget/theme-2/1083412512806019176.png" alt="Join my Discord!">
-  </a>
-  <div class="spotify-widget">
-    <a href="https://github.com/kittinan/spotify-github-profile" target="_blank">
-      <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=314q3t55yibgfdceuqbdd3g26pyq&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true" alt="Spotify GitHub Profile">
-    </a>
+    <div class="discord-banner">
+      <a href="https://discordid.netlify.app/?id=1083412512806019176" target="_blank">
+        <img src="https://discord.c99.nl/widget/theme-2/1083412512806019176.png" alt="Join my Discord!">
+      </a>
+      <div class="spotify-widget">
+        <a href="https://github.com/kittinan/spotify-github-profile" target="_blank">
+          <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=314q3t55yibgfdceuqbdd3g26pyq&cover_image=true&theme=novatorem&show_offline=false&background_color=121212&interchange=false&bar_color=53b14f&bar_color_cover=true" alt="Spotify GitHub Profile">
+        </a>
+      </div>
+    </div>
   </div>
-</div>
-
 
   <audio controls autoplay loop>
     <source src="https://www.televisiontunes.com/uploads/audio/One%20Piece%20-%20We%20Are.mp3" type="audio/mpeg">
